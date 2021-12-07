@@ -37,7 +37,7 @@ public class CarDealershipController {
 		return null;
 	}
 	
-	@GetMapping("sales/index") // Sales Role ONLY
+	@GetMapping("/sales/index") // Sales Role ONLY
 	public List<Sale> getSalesIndex() {
 		return null;
 	}
