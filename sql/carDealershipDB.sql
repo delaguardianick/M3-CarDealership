@@ -68,7 +68,8 @@ create table contact(
 	contactID int primary key auto_increment,
 	EmailAddress varchar(256),
     Address varchar(256),
-    ZipCode varchar(5)
+    ZipCode varchar(5),
+    message varchar(1000)
 );
 
 
