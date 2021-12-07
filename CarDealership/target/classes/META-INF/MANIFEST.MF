@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: gabriel
+Build-Jdk: 15.0.2
+Implementation-Title: CarDealership
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: CarDealership
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/CarDealership
+Created-By: Maven Integration for Eclipse
+
