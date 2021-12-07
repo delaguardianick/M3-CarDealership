@@ -24,8 +24,8 @@ values ('John', 'Smith', "SonjaVGreen@armyspy.com", null, '42145');
 insert into contact(firstname, lastname, emailAddress, address, zipcode)
 values ('Giovanna', 'Ribeiro', null, '123 Random Street', '15242');
 
-insert into sale (vehicleid, saleprice, purchasetype, userID)
-values ('1GNSKKE77DR377809', 22000.00, 1, 1);
+insert into sale (vehicleid, contactID, saleprice, purchasetype, userID)
+values ('1GNSKKE77DR377809', 1, 22000.00, 1, 1);
 
-insert into sale (vehicleid, saleprice, purchasetype, userID)
-values ( '1GNSKKE77DR377809', 22000.00, 1, 1);
+insert into sale (vehicleid, contactID, saleprice, purchasetype, userID)
+values ( '1GNSKKE77DR377809', 2, 22000.00, 1, 1);
