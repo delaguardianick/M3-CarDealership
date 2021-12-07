@@ -17,6 +17,11 @@ public class CarDealershipController {
 	
 	// TODO: Autowire service layer
 	
+	@GetMapping("/home/index")
+	public List<Vehicle> getFeatured() {
+		return null;
+	}
+	
 	@GetMapping("/inventory/new")
 	public List<Vehicle> getNewCars() {
 		return null;
@@ -29,11 +34,6 @@ public class CarDealershipController {
 	
 	@GetMapping("/inventory/details/{id}")
 	public Vehicle getCarDetails(@PathVariable("id") String vin) {
-		return null;
-	}
-	
-	@GetMapping("/specials")
-	public List<Vehicle> getSpecials() {
 		return null;
 	}
 	
