@@ -5,16 +5,17 @@
  */
 package com.mthree.cardealership.dao;
 
-import com.mthree.cardealership.entity.Vehicle;
-import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+
+import com.mthree.cardealership.entity.Vehicle;
 
 /**
  *
