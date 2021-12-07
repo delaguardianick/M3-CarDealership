@@ -9,7 +9,7 @@ package com.mthree.cardealership.entity;
  *
  * @author yond1
  */
-public class user {
+public class User {
     /*
     create table `user`(
 	userID int primary key,
@@ -23,10 +23,10 @@ public class user {
     private String lastName;
     private int role;
 
-    public user() {
+    public User() {
     }
 
-    public user(int userId, String firstName, String lastName, int role) {
+    public User(int userId, String firstName, String lastName, int role) {
         this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
