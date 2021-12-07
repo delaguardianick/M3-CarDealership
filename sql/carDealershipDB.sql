@@ -43,6 +43,7 @@ create table Vehicle (
     MSRP decimal(10,2),
     ImageURL varchar(1024),
     Featured boolean,
+    available boolean,
     foreign key fk_vehicle_color (color)
 		references color (colorID),
 	foreign key fk_vehicle_InteriorColor (interiorcolor)
@@ -81,7 +82,6 @@ create table sale(
     vehicleID varChar(17),
     salePrice decimal(10,2),
     purchaseType int,
-    available boolean,
     `date` DateTime DEFAULT CURRENT_TIMESTAMP,
     userID int,
     foreign key fk_sale_contactID (contactID)

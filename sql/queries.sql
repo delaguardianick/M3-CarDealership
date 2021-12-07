@@ -31,3 +31,8 @@ from vehicle
 where vin = '1GNSKKE77DR377809';
 
 -- Home/contact
+-- REPLACE all fields with ?
+-- Validation: email address should be proper email format
+-- Validation: email and address shouldnt be both null, needs to be validated in code
+insert into contact (firstname, lastname, emailaddress, address, zipcode, message)
+values ('Giovanna', 'Ribeiro', null, '123 Random Street', '15242');
