@@ -63,10 +63,10 @@ public class VehicleDaoDB implements VehicleDao{
             return null;
         }
     }
-
+    /*
     @Override
     public Vehicle addVehicle(Vehicle vehicle) {
-        final String INSERT_VEHICLE; //= "INSERT INTO vehicle() VALUES (?)";
+        final String INSERT_VEHICLE; //= "INSERT INTO vehicle(VIN) VALUES (?)";
         //jdbc.update(INSERT_VEHICLE, game.getAnswer());
         
         //int newGameId = jdbc.queryForObject("SELECT LAST_INSERT_ID()", Integer.class);
@@ -78,5 +78,5 @@ public class VehicleDaoDB implements VehicleDao{
     public void updateVehicle(Vehicle vehicle) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+    */
 }
