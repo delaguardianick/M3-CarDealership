@@ -30,12 +30,13 @@ select *
 from vehicle
 where vin = '1GNSKKE77DR377809';
 
+-- NOT USED
 -- Home/contact
 -- REPLACE: all fields with ?
 -- Validation: email address should be proper email format
 -- Validation: email and address shouldnt be both null, needs to be validated in code
-insert into contact (firstname, lastname, emailaddress, address, zipcode, message)
-values ('Giovanna', 'Ribeiro', null, '123 Random Street', '15242');
+-- insert into contact (firstname, lastname, emailaddress, address, zipcode, message)
+-- values ('Giovanna', 'Ribeiro', null, '123 Random Street', '15242');
 
 -- Sales/index
 select *
@@ -49,13 +50,14 @@ limit 20;
 -- VALIDATE: purchasePrice < MSRP (in vehicle table)
 -- SIDE EFFECTS: Makes vehicle sold unavailable 
 -- Clarification: ContactID is the buyer, userID is the seller
-insert into sale (contactID, vehicleID, salePrice, purchaseType, userID)
-values (1, '1GNSKKE77DR377809', 22000.00, 1, 1);
+
+insert into sale (vehicleid, emailaddress, address, zipcode, saleprice, purchasetype, userID)
+values ('KMHEC4A48DA099278', null, '123 Random Street', '15242', 387860.00, 1, 1);
 
 -- Update vehicle to be unavailable (when sale inserted)
 update vehicle
 set available = false
-where vehicleID = '_';
+where vin = '1GNSKKE77DR377809';
 
 -- Admin/AddVehicle
 -- VALIDATION: Year must be a 4 digit year between 2000 and the current year + 1 	

@@ -67,27 +67,32 @@ create table purchaseType(
     `type` varChar(30)
 );
 
-create table contact(
-	contactID int primary key auto_increment,
-    FirstName varchar(50),
-    LastName varchar(50),
-	EmailAddress varchar(256),
-    Address varchar(256),
-    ZipCode varchar(5),
-    message varchar(1000)
-);
+-- create table contact(
+-- 	contactID int primary key auto_increment,
+--     FirstName varchar(50),
+--     LastName varchar(50),
+-- 	EmailAddress varchar(256),
+--     Address varchar(256),
+--     ZipCode varchar(5),
+--     message varchar(1000)
+-- );
 
 
 create table sale(
 	saleID int primary key auto_increment,
-	contactID int,
     vehicleID varChar(17),
+    EmailAddress varchar(256),
+    Address varchar(256),
+    ZipCode varchar(5),
+	-- contactID int,
+		
     salePrice decimal(10,2),
     purchaseType int,
+    
     `date` DateTime DEFAULT CURRENT_TIMESTAMP,
     userID int,
-    foreign key fk_sale_contactID (contactID)
-		references contact (contactID),
+--     foreign key fk_sale_contactID (contactID)
+-- 		references contact (contactID),
     foreign key fk_sale_VehicleID (vehicleID)
 		references Vehicle (VIN),
 	foreign key fk_sale_userID (userID)
