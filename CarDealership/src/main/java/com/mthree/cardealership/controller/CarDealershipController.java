@@ -27,12 +27,16 @@ public class CarDealershipController {
 	
 	@GetMapping("/inventory/new")
 	public List<Vehicle> getNewCars() {
-		return null;
+            
+            List<Vehicle> newCars = svc.getNewCars();
+            return newCars;
 	}
 	
 	@GetMapping("/inventory/used")
 	public List<Vehicle> getUsedCars() {
-		return null;
+            
+            List<Vehicle> usedCars = svc.getUsedCars();
+            return usedCars;
 	}
 	
 	@GetMapping("/inventory/details/{id}")

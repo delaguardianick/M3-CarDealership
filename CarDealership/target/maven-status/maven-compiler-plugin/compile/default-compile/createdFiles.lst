@@ -1,0 +1,16 @@
+com\mthree\cardealership\entity\Vehicle.class
+com\mthree\cardealership\dao\VehicleDaoDB$VehicleMapper.class
+com\mthree\cardealership\service\CarDealershipServiceLayer.class
+com\mthree\cardealership\dao\SaleDaoDB$SaleMapper.class
+com\mthree\cardealership\entity\Sale.class
+com\mthree\cardealership\TestApplicationConfiguration.class
+com\mthree\cardealership\dao\VehicleDao.class
+com\mthree\cardealership\dao\UserDao.class
+com\mthree\cardealership\App.class
+com\mthree\cardealership\dao\UserDaoDB.class
+com\mthree\cardealership\entity\User.class
+com\mthree\cardealership\dao\SaleDaoDB.class
+com\mthree\cardealership\dao\VehicleDaoDB.class
+com\mthree\cardealership\dao\SaleDAO.class
+com\mthree\cardealership\controller\CarDealershipController.class
+com\mthree\cardealership\dao\UserDaoDB$UserMapper.class

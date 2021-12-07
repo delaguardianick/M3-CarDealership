@@ -34,7 +34,7 @@ public class Vehicle {
     );
     */
     private String VIN;
-    private int make;
+    private String make;
     private String model;
     private String year;
     private boolean transmission;
@@ -48,7 +48,7 @@ public class Vehicle {
     public Vehicle() {
     }
 
-    public Vehicle(String VIN, int make, String model, String year, boolean transmission, int color, int interiorColor, int type, BigDecimal MSRP, String imageURL, boolean featured) {
+    public Vehicle(String VIN, String make, String model, String year, boolean transmission, int color, int interiorColor, int type, BigDecimal MSRP, String imageURL, boolean featured) {
         this.VIN = VIN;
         this.make = make;
         this.model = model;
@@ -70,11 +70,11 @@ public class Vehicle {
         this.VIN = VIN;
     }
 
-    public int getMake() {
+    public String getMake() {
         return make;
     }
 
-    public void setMake(int make) {
+    public void setMake(String make) {
         this.make = make;
     }
 
