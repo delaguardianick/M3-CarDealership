@@ -66,6 +66,8 @@ create table purchaseType(
 
 create table contact(
 	contactID int primary key auto_increment,
+    FirstName varchar(50),
+    LastName varchar(50),
 	EmailAddress varchar(256),
     Address varchar(256),
     ZipCode varchar(5),
