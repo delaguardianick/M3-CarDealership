@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  *
  * @author yond1
  */
-public class sale {
+public class Sale {
     /*create table sale(
 	saleID int primary key,
     EmailAddress varchar(256),
@@ -42,10 +42,10 @@ public class sale {
     private LocalDateTime date;
     private int userId;
 
-    public sale() {
+    public Sale() {
     }
 
-    public sale(int saleId, String emailAddress, String address, String zipCode, int vehicleId, BigDecimal salePrice, int purchaseType, boolean available, LocalDateTime date, int userId) {
+    public Sale(int saleId, String emailAddress, String address, String zipCode, int vehicleId, BigDecimal salePrice, int purchaseType, boolean available, LocalDateTime date, int userId) {
         this.saleId = saleId;
         this.emailAddress = emailAddress;
         this.address = address;
