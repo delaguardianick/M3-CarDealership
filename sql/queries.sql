@@ -42,3 +42,17 @@ select *
 from vehicle
 where ( (make LIKE '%_%') or (model LIKE '%_%') or (`year` LIKE '%_%') ) and available = true
 limit 20;
+
+-- sales/purchase/id
+-- contact to be created before ex. contactid = 1
+-- REPLACE: all values()
+-- VALIDATE: purchasePrice < MSRP (in vehicle table)
+-- SIDE EFFECTS: Makes vehicle sold unavailable 
+-- Clarification: ContactID is the buyer, userID is the seller
+insert into sale (contactID, vehicleID, salePrice, purchaseType, userID)
+values (1, '1GNSKKE77DR377809', 22000.00, 1, 1);
+
+-- Update vehicle to be unavailable (when sale inserted)
+update vehicle
+set available = false
+where vehicleID = '_';

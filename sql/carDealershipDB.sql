@@ -39,11 +39,13 @@ create table Vehicle (
     Color int,
     InteriorColor int,
     `type` int,
+    mileage int,
     bodyStyle int,
     MSRP decimal(10,2),
     ImageURL varchar(1024),
     Featured boolean,
     available boolean,
+    `description` varchar(1024),
     foreign key fk_vehicle_color (color)
 		references color (colorID),
 	foreign key fk_vehicle_InteriorColor (interiorcolor)
