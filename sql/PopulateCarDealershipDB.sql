@@ -18,11 +18,11 @@ values ('David', 'Creger', 2);
 Insert into `user` (firstname, lastname, role)
 values ('Anna', 'Khan', 1);
 
-insert into contact(emailAddress, address, zipcode)
-values ("SonjaVGreen@armyspy.com", null, '42145');
+insert into contact(firstname, lastname, emailAddress, address, zipcode)
+values ('John', 'Smith', "SonjaVGreen@armyspy.com", null, '42145');
 
-insert into contact(emailAddress, address, zipcode)
-values (null, '123 Random Street', '15242');
+insert into contact(firstname, lastname, emailAddress, address, zipcode)
+values ('Giovanna', 'Ribeiro', null, '123 Random Street', '15242');
 
 insert into sale (vehicleid, saleprice, purchasetype, available, userID)
 values ('1GNSKKE77DR377809', 22000.00, 1, 1, 1);
