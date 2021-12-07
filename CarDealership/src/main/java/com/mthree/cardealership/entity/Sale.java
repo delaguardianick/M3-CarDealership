@@ -35,7 +35,7 @@ public class Sale {
     private String emailAddress;
     private String address;
     private String zipCode;
-    private int vehicleId;
+    private String vehicleId;
     private BigDecimal salePrice;
     private int purchaseType;
     private boolean available;
@@ -45,7 +45,7 @@ public class Sale {
     public Sale() {
     }
 
-    public Sale(int saleId, String emailAddress, String address, String zipCode, int vehicleId, BigDecimal salePrice, int purchaseType, boolean available, LocalDateTime date, int userId) {
+    public Sale(int saleId, String emailAddress, String address, String zipCode, String vehicleId, BigDecimal salePrice, int purchaseType, boolean available, LocalDateTime date, int userId) {
         this.saleId = saleId;
         this.emailAddress = emailAddress;
         this.address = address;
@@ -90,11 +90,11 @@ public class Sale {
         this.zipCode = zipCode;
     }
 
-    public int getVehicleId() {
+    public String getVehicleId() {
         return vehicleId;
     }
 
-    public void setVehicleId(int vehicleId) {
+    public void setVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
     }
 
