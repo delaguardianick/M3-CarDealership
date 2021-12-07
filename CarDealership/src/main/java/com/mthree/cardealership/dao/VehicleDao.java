@@ -18,6 +18,6 @@ public interface VehicleDao {
     
     List<Vehicle> getAllVehicles();
     Vehicle getVehicleByVin(int VIN);
-    Vehicle addVehicle(Vehicle vehicle);
-    void updateVehicle(Vehicle vehicle);
+    /*Vehicle addVehicle(Vehicle vehicle);
+    void updateVehicle(Vehicle vehicle);*/
 }
