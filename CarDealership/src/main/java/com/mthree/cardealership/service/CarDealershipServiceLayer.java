@@ -22,6 +22,15 @@ public class CarDealershipServiceLayer {
 	private VehicleDao vehicleDao;
 	@Autowired
 	private UserDao userDao;
+        
+        
+    public List<Vehicle> getNewCars(){
+        return vehicleDao.getNewCars();
+    }
+    
+     public List<Vehicle> getUsedCars(){
+        return vehicleDao.getUsedCars();
+    }
 	
 	public List<Vehicle> getFeaturedVehicles() {
 		List<Vehicle> featured = new ArrayList<>();

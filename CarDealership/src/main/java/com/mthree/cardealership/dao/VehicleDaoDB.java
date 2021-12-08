@@ -34,8 +34,8 @@ public class VehicleDaoDB implements VehicleDao{
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             Vehicle vehicle = new Vehicle();
             vehicle.setVIN(rs.getString("VIN"));
-            vehicle.setMake(rs.getInt("Make"));
-            vehicle.setModel(rs.getString(rs.getString("Model")));
+            vehicle.setMake(rs.getString("Make"));
+            vehicle.setModel(rs.getString("Model"));
             vehicle.setYear(rs.getString("Year"));
             vehicle.setTransmission(rs.getBoolean("Transmission"));
             vehicle.setColor(rs.getInt("Color"));
@@ -56,14 +56,37 @@ public class VehicleDaoDB implements VehicleDao{
     }
 
     @Override
-    public Vehicle getVehicleByVin(String VIN) {
-        try{
-            final String SELECT_BY_VIN = "SELECT * FROM vehicle where VIN = ?";
-            return jdbc.queryForObject(SELECT_BY_VIN, new VehicleMapper());
-        }catch(DataAccessException ex){
-            return null;
-        }
+    public List<Vehicle> getNewCars(){
+        final String sql = "SELECT * "
+                + "FROM vehicle "
+                + "where ( (make LIKE '%%') or (model LIKE '%%') or"
+                + " (`year` LIKE '%%') ) and type = 1 "
+                + "LIMIT 20;";
+                
+        return jdbc.query(sql, new VehicleMapper());
     }
+    
+    @Override
+    public List<Vehicle> getUsedCars(){
+        final String sql = "SELECT * "
+                + "FROM vehicle "
+                + "where ( (make LIKE '%%') or (model LIKE '%%') or"
+                + " (`year` LIKE '%%') ) and type = 2 "
+                + "LIMIT 20;";
+                
+        return jdbc.query(sql, new VehicleMapper());
+    }
+    
+    @Override
+    public Vehicle getVehicleByVin(String VIN) {
+    	try{
+    		final String SELECT_BY_VIN = "SELECT * FROM vehicle where VIN = ?";
+    		return jdbc.queryForObject(SELECT_BY_VIN, new VehicleMapper());
+    	}catch(DataAccessException ex){
+    		return null;
+    	}
+    }
+    
     /*
     @Override
     public Vehicle addVehicle(Vehicle vehicle) {
@@ -80,4 +103,5 @@ public class VehicleDaoDB implements VehicleDao{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     */
+
 }

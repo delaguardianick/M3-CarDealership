@@ -9,7 +9,7 @@ where featured = true;
 -- REPLACE: '_' with ?
 select *
 from vehicle
-where ( (make LIKE '%_%') or (model LIKE '%_%') or (`year` LIKE '%_%') ) and type = 1
+where ( (make LIKE '%%') or (model LIKE '%%') or (`year` LIKE '%%') ) and type = 1
 limit 20;
 
 -- Helper in case of no filte - return vehicles with highest MSRP
