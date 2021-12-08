@@ -44,25 +44,29 @@ public class Vehicle {
     private BigDecimal MSRP;
     private String imageURL;
     private boolean featured;
+    private boolean available;
 
     public Vehicle() {
     }
 
-    public Vehicle(String VIN, int make, String model, String year, boolean transmission, int color, int interiorColor, int type, BigDecimal MSRP, String imageURL, boolean featured) {
-        this.VIN = VIN;
-        this.make = make;
-        this.model = model;
-        this.year = year;
-        this.transmission = transmission;
-        this.color = color;
-        this.interiorColor = interiorColor;
-        this.type = type;
-        this.MSRP = MSRP;
-        this.imageURL = imageURL;
-        this.featured = featured;
-    }
+    public Vehicle(String vIN, int make, String model, String year, boolean transmission, int color, int interiorColor,
+			int type, BigDecimal mSRP, String imageURL, boolean featured, boolean available) {
+		super();
+		VIN = vIN;
+		this.make = make;
+		this.model = model;
+		this.year = year;
+		this.transmission = transmission;
+		this.color = color;
+		this.interiorColor = interiorColor;
+		this.type = type;
+		MSRP = mSRP;
+		this.imageURL = imageURL;
+		this.featured = featured;
+		this.available = available;
+	}
 
-    public String getVIN() {
+	public String getVIN() {
         return VIN;
     }
 
@@ -149,5 +153,13 @@ public class Vehicle {
     public void setFeatured(boolean featured) {
         this.featured = featured;
     }
+
+	public boolean isAvailable() {
+		return available;
+	}
+
+	public void setAvailable(boolean available) {
+		this.available = available;
+	}
            
 }

@@ -22,7 +22,7 @@ public class CarDealershipController {
 	
 	@GetMapping("/home/index")
 	public List<Vehicle> getFeatured() {
-		return null;
+		return svc.getFeaturedVehicles();
 	}
 	
 	@GetMapping("/inventory/new")
@@ -45,9 +45,9 @@ public class CarDealershipController {
 		return null;
 	}
 	
-	@PostMapping("/sales/purchase/{id}")
-	public Sale makePurchase(@PathVariable("id") int vehicleId) {
-		return null;
+	@PostMapping("/sales/purchase/{vehicleId}")
+	public Sale makePurchase(@PathVariable("vehicleId") String vehicleId) {
+		return svc.completeSale(vehicleId);
 	}
 	
 }

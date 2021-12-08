@@ -56,7 +56,7 @@ public class VehicleDaoDB implements VehicleDao{
     }
 
     @Override
-    public Vehicle getVehicleByVin(int VIN) {
+    public Vehicle getVehicleByVin(String VIN) {
         try{
             final String SELECT_BY_VIN = "SELECT * FROM vehicle where VIN = ?";
             return jdbc.queryForObject(SELECT_BY_VIN, new VehicleMapper());
