@@ -76,18 +76,17 @@ public class VehicleDaoDB implements VehicleDao{
                 
         return jdbc.query(sql, new VehicleMapper());
     }
-     
-    
     
     @Override
-    public Vehicle getVehicleByVin(int VIN) {
-        try{
-            final String SELECT_BY_VIN = "SELECT * FROM vehicle where VIN = ?";
-            return jdbc.queryForObject(SELECT_BY_VIN, new VehicleMapper());
-        }catch(DataAccessException ex){
-            return null;
-        }
+    public Vehicle getVehicleByVin(String VIN) {
+    	try{
+    		final String SELECT_BY_VIN = "SELECT * FROM vehicle where VIN = ?";
+    		return jdbc.queryForObject(SELECT_BY_VIN, new VehicleMapper());
+    	}catch(DataAccessException ex){
+    		return null;
+    	}
     }
+    
     /*
     @Override
     public Vehicle addVehicle(Vehicle vehicle) {
@@ -104,4 +103,5 @@ public class VehicleDaoDB implements VehicleDao{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     */
+
 }

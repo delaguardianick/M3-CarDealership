@@ -38,7 +38,6 @@ public class Sale {
     private String vehicleId;
     private BigDecimal salePrice;
     private int purchaseType;
-    private boolean available;
     private LocalDateTime date;
     private int userId;
 
@@ -53,7 +52,6 @@ public class Sale {
         this.vehicleId = vehicleId;
         this.salePrice = salePrice;
         this.purchaseType = purchaseType;
-        this.available = available;
         this.date = date;
         this.userId = userId;
     }
@@ -112,14 +110,6 @@ public class Sale {
 
     public void setPurchaseType(int purchaseType) {
         this.purchaseType = purchaseType;
-    }
-
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public void setAvailable(boolean available) {
-        this.available = available;
     }
 
     public LocalDateTime getDate() {
