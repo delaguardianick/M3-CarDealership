@@ -41,12 +41,12 @@ public class CarDealershipController {
 	
 	@GetMapping("/inventory/details/{id}")
 	public Vehicle getCarDetails(@PathVariable("id") String vin) {
-		return null;
+		return svc.getCarDetails(vin);
 	}
 	
 	@GetMapping("/sales/index") // Sales Role ONLY
 	public List<Sale> getSalesIndex() {
-		return null;
+		return svc.getSalesIndex();
 	}
 	
 	@PostMapping("/sales/purchase/{vehicleId}")
