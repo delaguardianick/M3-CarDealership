@@ -81,7 +81,7 @@ public class VehicleDaoDB implements VehicleDao{
     public Vehicle getVehicleByVin(String VIN) {
     	try{
     		final String SELECT_BY_VIN = "SELECT * FROM vehicle where VIN = ?";
-    		return jdbc.queryForObject(SELECT_BY_VIN, new VehicleMapper());
+    		return jdbc.queryForObject(SELECT_BY_VIN, new VehicleMapper(),VIN);
     	}catch(DataAccessException ex){
     		return null;
     	}

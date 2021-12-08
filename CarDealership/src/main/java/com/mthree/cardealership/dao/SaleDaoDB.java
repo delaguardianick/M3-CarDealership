@@ -29,7 +29,8 @@ public class SaleDaoDB implements SaleDAO {
 	@Override
 	@Transactional
 	public Sale addSale(Sale sale) {
-		final String s = "INSERT INTO sale(vehicleID, EmailAddress, Address, ZipCode, salePrice, purchaseType, userID";
+		final String s = "INSERT INTO sale(vehicleID, EmailAddress, Address, ZipCode, salePrice, purchaseType, userID)"
+                        +" VALUES(?,?,?,?,?,?,?)";
 		jdbc.update(s, sale.getVehicleId(), sale.getEmailAddress(), sale.getAddress(), sale.getZipCode(),
 				sale.getSalePrice(), sale.getPurchaseType(), sale.getUserId());
 		int newSaleId = jdbc.queryForObject("SELECT LAST_INSERT_ID()", Integer.class);
